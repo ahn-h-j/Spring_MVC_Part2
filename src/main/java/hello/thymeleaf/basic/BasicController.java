@@ -14,5 +14,9 @@ public class BasicController {
         return "basic/text-basic";
     }
 
-
+    @GetMapping("text-unescaped")
+    public String textUnescaped(Model model){
+        model.addAttribute("data","hello <b>spring</b>");
+        return "basic/text-unescaped.html";
+    }
 }
